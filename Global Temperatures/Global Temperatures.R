@@ -78,4 +78,4 @@ temps |>
     axis.text.x = element_text(size = 7, color = "#8a8a8a")
   )
 
-ggsave("Change in global surface temperature.png", width = 6, heigh = 4.34)
+ggsave("Change in global surface temperature.png", width = 6, height = 4.34)

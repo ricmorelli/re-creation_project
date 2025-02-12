@@ -1,0 +1,13 @@
+I was initially drawn to this plot as it combined two delivery elements I value highly: 
+1)	Immediately convey the main contention.
+2)	Add depth and context for those who wish to delve deeper.
+
+At a quick glance, the average reader can ascertain that almost all of the tax cuts are going to the Top 1%. Even if the reader immediately decides to keep scrolling, the main insight has already been highlighted to them. Visually, the plot author has removed a lot of unnecessary clutter, namely y-axis labelling. As the data values are quite polar (either near 0 or 100), gridlines are also able to be removed without hindering the readability of each data point.
+
+Most of the issues I have with this plot surround the discrete x-axis labelling. The author has broken up the top quintile data into four unequal segments and labelled each individually. Although I understand the reasoning behind this decision, I could be misleading to the uninformed reader who may instinctively presume each bar represents a similarly sized sample.
+
+Additionally, I dislike the use of quintiles as a grouping mechanism for this chart. While on a technical level I do believe that quintiles are the best way to represent grouping for this data, they do not appeal to the average reader. I feel that the proportion of the population who don't already know that the GOP Tax Cuts overwhelmingly helped the Top 1% are also unlikely to know what a quintile is.
+
+Many readers would be unaware of which income quintile they are in, and as a result, would not derive much personal utility from the plot. To expand the appeal of this chart more widely, I would group the data by income bracket, as this is directly relatable to any reader.
+
+From a plot re-creation standpoint, clip = off did most of the heavy lifting to properly place the text and rect annotations. I ran into issues with the horizontal line separator beneath the caption which was being clipped by the left & right plot margins. I tried to solve this by using annotate_custom to place a segment outside of the plot. Unfortunately, I had a very large bottom margin which was holding the plot up so this annotation was also margined out. I could solve all of these issues by finding a way to fix the dimensions of the barplot.
